@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">f1it2-team-31-android</string>
+    <string name="description_main_logo">Main logo</string>
+    <string name="text_button_login">Iniciar sesión</string>
+    <string name="text_button_register">Registrarse</string>
+    <string name="text_footer">Desarrollado por Team #31, Devs Latam</string>
 </resources>
