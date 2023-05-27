@@ -4,4 +4,9 @@
     <string name="text_button_login">Iniciar sesión</string>
     <string name="text_button_register">Registrarse</string>
     <string name="text_footer">Desarrollado por Team #31, Devs Latam</string>
+    <string name="text_title_login">Inicio de sesión</string>
+    <string name="text_et_correo">Correo</string>
+    <string name="text_et_password">contraseña</string>
+    <string name="text_welcome">Bienvenido\nPor favor inicia sesión para continuar</string>
+    <string name="text_title_app">Gestión\nde reserva\nrestaurantes</string>
 </resources>

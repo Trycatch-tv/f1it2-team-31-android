@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_slate_gray"
     android:fillViewport="true"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,10 +30,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_dimen_default"
             android:fontFamily="@font/inter_extra_bold"
-            android:text="Gestión&#10;de reserva&#10;restaurantes"
+            android:text="@string/text_title_app"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="32sp"
+            android:textSize="@dimen/common_letter_size_max"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/img_main_logo" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="custom_TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/color_text_field</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="hintTextColor">@color/dark_slate_gray</item>
+        <item name="android:textColorHint">@color/dark_slate_gray</item>
+        <item name="android:textColor">@color/dark_slate_gray</item>
+        <item name="startIconTint">@color/color_text_field</item>
+    </style>
+</resources>
