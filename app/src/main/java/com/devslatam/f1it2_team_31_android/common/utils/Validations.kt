@@ -1,5 +1,6 @@
 package com.devslatam.f1it2_team_31_android.common.utils
 
+import android.content.Context
 import android.util.Patterns
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
@@ -38,5 +39,13 @@ object Validations {
             return false
         }
         return true
+    }
+
+    fun extractMsg(context: Context, msg: String): String {
+        return try {
+            context.getString(msg.toInt())
+        }catch (e: Exception){
+            msg
+        }
     }
 }

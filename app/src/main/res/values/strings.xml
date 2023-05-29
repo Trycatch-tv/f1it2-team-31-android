@@ -9,4 +9,10 @@
     <string name="text_et_password">contraseña</string>
     <string name="text_welcome">Bienvenido\nPor favor inicia sesión para continuar</string>
     <string name="text_title_app">Gestión\nde reserva\nrestaurantes</string>
+    <string name="error_server_response">Error de respuesta del servidor</string>
+    <string name="error_unknown_host">Host desconocido</string>
+    <string name="error_timeout">Tiempo de espera agotado</string>
+    <string name="error_conexion">Error de conexión</string>
+    <string name="error_parse_json">Error de análisis de datos</string>
+    <string name="error_unknown">Error desconocido</string>
 </resources>
