@@ -1,5 +1,6 @@
 package com.devslatam.f1it2_team_31_android.common.dataAccess
 
+import com.devslatam.f1it2_team_31_android.common.entities.UserRegisterRequest
 import com.devslatam.f1it2_team_31_android.common.entities.UserResponse
 import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
 import com.devslatam.f1it2_team_31_android.common.utils.Constants
@@ -17,4 +18,10 @@ interface ApiService {
     suspend fun loginUser(
         @Body userRequest: UserRequest
     ): UserResponse
+
+    @POST(Constants.API_PATH_REGISTER)
+    suspend fun RegisterUser(
+        @Body userRegisterRequest: UserRegisterRequest
+    ): UserResponse
+
 }

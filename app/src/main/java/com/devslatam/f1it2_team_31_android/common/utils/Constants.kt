@@ -11,4 +11,5 @@ import com.devslatam.f1it2_team_31_android.R
 object Constants {
     const val BASE_URL = "https://reqres.in"
     const val API_PATH_LOGIN = "/api/login"
+    const val API_PATH_REGISTER = "/api/register"
 }

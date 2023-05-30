@@ -1,6 +1,7 @@
 package com.devslatam.f1it2_team_31_android.model
 
 import com.devslatam.f1it2_team_31_android.common.dataAccess.ApiService
+import com.devslatam.f1it2_team_31_android.common.entities.UserRegisterRequest
 import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
 import com.devslatam.f1it2_team_31_android.common.entities.UserResponse
 import com.devslatam.f1it2_team_31_android.common.utils.Constants
@@ -25,4 +26,9 @@ class RequestApi {
     suspend fun requestUserLogin(userRequest: UserRequest): UserResponse = withContext(dispatcher) {
         service.loginUser(userRequest)
     }
+
+    suspend fun requestUserRegister(userRegisterRequest: UserRegisterRequest): UserResponse =
+        withContext(dispatcher) {
+            service.RegisterUser(userRegisterRequest)
+        }
 }
