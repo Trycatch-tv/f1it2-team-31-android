@@ -5,14 +5,28 @@
     <string name="text_button_register">Registrarse</string>
     <string name="text_footer">Desarrollado por Team #31, Devs Latam</string>
     <string name="text_title_login">Inicio de sesión</string>
-    <string name="text_et_correo">Correo</string>
+    <string name="text_et_email">Correo</string>
     <string name="text_et_password">contraseña</string>
     <string name="text_welcome">Bienvenido\nPor favor inicia sesión para continuar</string>
     <string name="text_title_app">Gestión\nde reserva\nrestaurantes</string>
     <string name="error_server_response">Error de respuesta del servidor</string>
     <string name="error_unknown_host">Host desconocido</string>
     <string name="error_timeout">Tiempo de espera agotado</string>
-    <string name="error_conexion">Error de conexión</string>
+    <string name="error_connection">Error de conexión</string>
     <string name="error_parse_json">Error de análisis de datos</string>
     <string name="error_unknown">Error desconocido</string>
+    <string name="text_btn_back">Volver</string>
+    <string name="text_title_register">Registro</string>
+    <string name="text_et_name">Nombre</string>
+    <string name="text_et_last_name">Apellido</string>
+    <string name="text_et_phone">Telefono</string>
+    <string name="text_tv_type_user">Tipo de usuario</string>
+    <string name="text_type_user_no_selected">Seleccione un valor tipo de usuario valido</string>
+    <string name="text_select_value">Seleccione un valor valido</string>
+
+    <string-array name="spinner_values">
+        <item>Seleccione</item>
+        <item>Cliente</item>
+        <item>Comerciante</item>
+    </string-array>
 </resources>

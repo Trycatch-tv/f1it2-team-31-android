@@ -34,7 +34,7 @@ object ErrorHandlingUtils {
         return when (exception) {
             is SocketTimeoutException -> R.string.error_timeout.toString()
             is UnknownHostException -> R.string.error_unknown_host.toString()
-            is IOException -> R.string.error_conexion.toString()
+            is IOException -> R.string.error_connection.toString()
             is JsonParseException -> R.string.error_parse_json.toString()
             else -> R.string.error_unknown.toString()
         }
