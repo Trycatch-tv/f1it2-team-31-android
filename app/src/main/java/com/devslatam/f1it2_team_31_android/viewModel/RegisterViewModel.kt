@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.devslatam.f1it2_team_31_android.common.entities.UserRegisterRequest
-import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
 import com.devslatam.f1it2_team_31_android.common.entities.UserResponse
 import com.devslatam.f1it2_team_31_android.common.utils.ErrorHandlingUtils
 import com.devslatam.f1it2_team_31_android.model.RegisterModel

@@ -1,7 +1,6 @@
 package com.devslatam.f1it2_team_31_android.model
 
 import com.devslatam.f1it2_team_31_android.common.entities.UserRegisterRequest
-import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
 import com.devslatam.f1it2_team_31_android.common.entities.UserResponse
 
 /* 

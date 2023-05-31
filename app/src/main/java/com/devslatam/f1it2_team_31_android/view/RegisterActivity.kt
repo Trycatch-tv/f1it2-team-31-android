@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.devslatam.f1it2_team_31_android.R
 import com.devslatam.f1it2_team_31_android.common.entities.UserRegisterRequest
-import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
+import com.devslatam.f1it2_team_31_android.common.utils.ViewUtil
 import com.devslatam.f1it2_team_31_android.common.utils.Validations
 import com.devslatam.f1it2_team_31_android.databinding.ActivityRegisterBinding
 import com.devslatam.f1it2_team_31_android.viewModel.RegisterViewModel
@@ -23,12 +23,14 @@ import com.google.android.material.snackbar.Snackbar
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private val registerViewModel: RegisterViewModel by viewModels()
+    private lateinit var viewUtil : ViewUtil
     private var spinnerValue : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        viewUtil = ViewUtil(this)
 
         setUpObservers()
         setUpButtons()
@@ -48,6 +50,9 @@ class RegisterActivity : AppCompatActivity() {
                     Validations.extractMsg( this@RegisterActivity ,msg),
                     Snackbar.LENGTH_LONG
                 ).show()
+            }
+            it.isLoaded().observe(this) {loaded ->
+                if (loaded) viewUtil.hideCustomProgressDialog()
             }
         }
     }
@@ -71,6 +76,8 @@ class RegisterActivity : AppCompatActivity() {
                         etPassword.text.toString(),
                         spinnerValue
                     )
+                    viewUtil.showCustomProgressDialog("Registrando usuario...")
+                    viewUtil.hideKeyboard(binding.root)
                     registerViewModel.postUserLogin(userRegisterRequest)
                 }
             }

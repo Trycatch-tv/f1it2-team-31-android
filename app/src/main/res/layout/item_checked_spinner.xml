@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="32dp"
     android:minWidth="160dp"
-    android:background="@drawable/style_border_spinner"
+    android:background="@drawable/custom_spinner"
     android:ellipsize="marquee"
     android:fontFamily="@font/inter_semi_bold"
     android:shadowColor="@color/dark_slate_gray"

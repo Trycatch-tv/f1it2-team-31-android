@@ -16,4 +16,11 @@
         <item name="android:textColor">@color/dark_slate_gray</item>
         <item name="startIconTint">@color/color_text_field</item>
     </style>
+
+    <style name="OverlayProgressBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:indeterminateDrawable">@drawable/custom_progressbar</item>
+    </style>
 </resources>

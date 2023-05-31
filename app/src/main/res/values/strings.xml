@@ -23,6 +23,7 @@
     <string name="text_tv_type_user">Tipo de usuario</string>
     <string name="text_type_user_no_selected">Seleccione un valor tipo de usuario valido</string>
     <string name="text_select_value">Seleccione un valor valido</string>
+    <string name="text_title_progressbar">Por favor espere</string>
 
     <string-array name="spinner_values">
         <item>Seleccione</item>

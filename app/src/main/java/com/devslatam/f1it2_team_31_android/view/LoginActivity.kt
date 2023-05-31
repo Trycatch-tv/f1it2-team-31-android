@@ -1,13 +1,14 @@
 package com.devslatam.f1it2_team_31_android.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.devslatam.f1it2_team_31_android.common.entities.UserRequest
+import com.devslatam.f1it2_team_31_android.common.utils.ViewUtil
 import com.devslatam.f1it2_team_31_android.common.utils.Validations
 import com.devslatam.f1it2_team_31_android.databinding.ActivityLoginBinding
 import com.devslatam.f1it2_team_31_android.viewModel.LoginViewModel
@@ -16,11 +17,13 @@ import com.google.android.material.snackbar.Snackbar
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private val loginViewModel: LoginViewModel by viewModels()
+    private lateinit var viewUtil : ViewUtil
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        viewUtil = ViewUtil(this)
 
         sepUpObservers()
         setUpButtons()
@@ -38,6 +41,9 @@ class LoginActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG
                 ).show()
             }
+            it.isLoaded().observe(this) {loaded ->
+                if (loaded) viewUtil.hideCustomProgressDialog()
+            }
         }
     }
 
@@ -50,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
                 if (Validations.validateFields(root, tilEmail, tilPassword)
                     && Validations.isEmailValid(root, tilEmail)) {
                     val userRequest = UserRequest(etEmail.text.toString(), etPassword.text.toString())
+                    viewUtil.showCustomProgressDialog("Iniciando sesión...")
+                    viewUtil.hideKeyboard(binding.root)
                     loginViewModel.postUserLogin(userRequest)
                 }
             }
